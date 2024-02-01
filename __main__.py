@@ -1,7 +1,6 @@
 allow_bots = False
 
 import telebot
-import sys
 from time import sleep as wait
 token="Null"
 token = input("Token >>>")
