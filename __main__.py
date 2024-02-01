@@ -1,6 +1,7 @@
 allow_bots = False
-
+import traceback
 import telebot
+import sys
 from time import sleep as wait
 token="Null"
 token = input("Token >>>")
@@ -47,6 +48,7 @@ def T_read(message):
 		file.close()
 
 	except BaseException as e:
+		bot.send_message(message.chat.id,str(traceback.format_exc()))
 		bot.send_message(message.chat.id,'Ой, файла нету')
 		print(e)
 
